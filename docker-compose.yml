@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  freelearn-golang-zh:
+    image: "devops/freelearn-golang-zh:latest"
+    container_name: "freelearn-golang-zh"
+    ports:
+      - "8802:80"
+    stdin_open: true
+    tty: true
+    networks:
+      - nginx_proxy
+
+networks:
+  nginx_proxy:
+    driver: bridge
